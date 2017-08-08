@@ -8,7 +8,7 @@ addEventListener('DOMContentLoaded', main);
 function main() {
 	const $root = document.querySelector('#root');
 	const $app = div(
-		{ class: 'col s12' },
+		{ class: 'col s12 container' },
 		form(
 			div(
 				{ class: 'col offset-s2 s7' },
