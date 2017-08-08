@@ -12,4 +12,12 @@ class PokemonSpritesPageScraper {
 			.then(text => parser.parseFromString(text, 'text/html'))
 			.then(dom => this.createDataObject(dom));
 	}
+
+	createDataObject(dom) {
+		const widgetObj = {};
+		const pokeGIF = dom.querySelectorAll("a[href$='.gif")[0].href;
+		widgetObj.image = pokeGIF;
+		widgetObj.name = dom.getElementsByTagName('title')[0];
+		return widgetObj;
+	}
 }
