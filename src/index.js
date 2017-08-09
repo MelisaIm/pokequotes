@@ -21,7 +21,7 @@ function main() {
 			const data = {};
 			BrainyScraper.scrape(inputQuote.value).then(BrainyData => {
 				Object.assign(data, BrainyData);
-				PokeScraper.scrape(`https://pokemondb.net/sprites/${inputPoke.value}`).then(PokeData => {
+				PokeScraper.scrape(`${inputPoke.value}`).then(PokeData => {
 					Object.assign(data, PokeData);
 					const $widget = Widget(data);
 					const displayArea = document.getElementById('display');

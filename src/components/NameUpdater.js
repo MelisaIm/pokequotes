@@ -18,9 +18,7 @@ module.exports = function NameUpdater(pokemon, author) {
 			}
 		} else {
 			let name = nameArray[0];
-			const indexSplit = Math.round(name.length / 2);
-			name = name.slice(indexSplit);
-			return name;
+			return name + `${pokeName.pokeLast}`;
 		}
 		return finalName.join(' ');
 	}
