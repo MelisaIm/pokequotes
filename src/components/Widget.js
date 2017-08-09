@@ -1,4 +1,5 @@
 const { div, img } = require('elementx');
+const NameUpdater = require('./NameUpdater');
 
 module.exports = function Widget(data) {
 	const column = div(
@@ -9,7 +10,7 @@ module.exports = function Widget(data) {
 			div(
 				{ class: 'card-content center' },
 				`${data.text}
-       ${data.author}`
+       ${NameUpdater(data.name, data.author)}`
 			),
 			img({ src: `${data.image}` })
 		)

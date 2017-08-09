@@ -6,7 +6,8 @@ class PokemonSpritesPageScraper {
 	}
 
 	scrape(url) {
-		return fetch(`http://cors-bypass-proxy.axiomlogic.com/${url}`)
+		const init = { header: { header: null } };
+		return fetch(`${url}`, init)
 			.then(response => response.text())
 			.then(text => parser.parseFromString(text, 'text/html'))
 			.then(dom => this.createDataObject(dom));
@@ -17,7 +18,7 @@ class PokemonSpritesPageScraper {
 		const pokeGIF = dom.querySelectorAll("a[href$='.gif")[0].href;
 		widgetObj.image = pokeGIF;
 		const pageTitle = dom.getElementsByTagName('title')[0];
-		widgetObj.name = pageTitle.innerText.replace(/( sprites gallery | Pokémon Database)/, '');
+		widgetObj.name = pageTitle.innerText.slice(0, pageTitle.innerText.indexOf(' '));
 		return widgetObj;
 	}
 }

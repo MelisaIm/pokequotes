@@ -18,12 +18,12 @@ function main() {
 		if (inputQuote.value === '' || inputPoke.value === '') {
 			Materialize.toast('Your input is blank!', 4000);
 		} else {
-			const Data = {};
+			const data = {};
 			BrainyScraper.scrape(inputQuote.value).then(BrainyData => {
-				Object.assign(Data, BrainyData);
+				Object.assign(data, BrainyData);
 				PokeScraper.scrape(`https://pokemondb.net/sprites/${inputPoke.value}`).then(PokeData => {
-					Object.assign(Data, PokeData);
-					const $widget = Widget(Data);
+					Object.assign(data, PokeData);
+					const $widget = Widget(data);
 					const displayArea = document.getElementById('display');
 					displayArea.appendChild($widget);
 				});
