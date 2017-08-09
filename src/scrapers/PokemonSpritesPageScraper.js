@@ -1,4 +1,3 @@
-const { div } = require('elementx');
 const parser = new DOMParser();
 
 class PokemonSpritesPageScraper {
@@ -6,8 +5,8 @@ class PokemonSpritesPageScraper {
 		this.image, this.name;
 	}
 
-	fetchData(url) {
-		fetch(`http://cors-bypass-proxy.axiomlogic.com/${url}`)
+	scrape(url) {
+		return fetch(`http://cors-bypass-proxy.axiomlogic.com/${url}`)
 			.then(response => response.text())
 			.then(text => parser.parseFromString(text, 'text/html'))
 			.then(dom => this.createDataObject(dom));
@@ -17,7 +16,10 @@ class PokemonSpritesPageScraper {
 		const widgetObj = {};
 		const pokeGIF = dom.querySelectorAll("a[href$='.gif")[0].href;
 		widgetObj.image = pokeGIF;
-		widgetObj.name = dom.getElementsByTagName('title')[0];
+		const pageTitle = dom.getElementsByTagName('title')[0];
+		widgetObj.name = pageTitle.innerText.replace(/( sprites gallery | Pokémon Database)/, '');
 		return widgetObj;
 	}
 }
+
+module.exports = PokemonSpritesPageScraper;

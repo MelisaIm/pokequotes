@@ -15,12 +15,17 @@ span {
 	display: block;
 }
 
+/*img {
+}*/
+
 .row {
 	width: 100%;
 }
 
+#container {
+	margin-top: 40px;
+}
+
 .card {
-	margin: 20px;
-	height: ;
-	width: 50%;
+	height: 250px;
 }
