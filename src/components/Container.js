@@ -1,4 +1,5 @@
 const { div, form, input, button, img } = require('elementx');
+const NameUpdater = require('./NameUpdater');
 
 module.exports = function Container() {
 	const container = div(
