@@ -18,16 +18,30 @@ function main() {
 		if (inputQuote.value === '' || inputPoke.value === '') {
 			Materialize.toast('Your input is blank!', 4000);
 		} else {
-			const data = {};
+			const Data = {};
 			BrainyScraper.scrape(inputQuote.value).then(BrainyData => {
-				Object.assign(data, BrainyData);
+				Object.assign(Data, BrainyData);
 				PokeScraper.scrape(`${inputPoke.value}`).then(PokeData => {
-					Object.assign(data, PokeData);
-					const $widget = Widget(data);
+					Object.assign(Data, PokeData);
+					const $widget = Widget(Data);
 					const displayArea = document.getElementById('display');
 					displayArea.appendChild($widget);
 				});
 			});
 		}
+	});
+
+	//pokedex event listener
+
+	const lidClosed = document.getElementById('lidClosed');
+	const lidOpen = document.getElementById('lidOpen');
+	const trapezoidBorder = document.getElementById('trapezoidLidBorder');
+	const trapezoidLid = document.getElementById('trapezoidLid');
+
+	document.addEventListener('transitionend', () => {
+		trapezoidBorder.setAttribute('style', 'visibility: hidden');
+		trapezoidLid.setAttribute('style', 'visibility:hidden');
+		lidClosed.setAttribute('style', 'visibility: hidden');
+		lidOpen.setAttribute('style', 'visibility:visible');
 	});
 }

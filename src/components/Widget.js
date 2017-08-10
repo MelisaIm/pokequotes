@@ -1,19 +1,15 @@
-const { div, img } = require('elementx');
-const NameUpdater = require('./NameUpdater');
+const { div } = require('elementx');
+const pokedex = require('./PokedexRender.js');
 
 module.exports = function Widget(data) {
 	const column = div(
-		{ class: 'col s12 l6' },
-		div(
-			{ class: 'card hoverable center-align' },
-			div({ class: 'card-image' }),
-			div(
-				{ class: 'card-content center' },
-				`${data.text}
-       ${NameUpdater(data.name, data.author)}`
-			),
-			img({ src: `${data.image}` })
-		)
+		{ id: 'pokemonWidget', class: 'col s12' },
+		div({ class: 'card hoverable center-align' }, pokedex(data))
 	);
 	return column;
 };
+
+//
+// `${data.text}
+// ${data.author}`
+// img({ src: `${data.image}`

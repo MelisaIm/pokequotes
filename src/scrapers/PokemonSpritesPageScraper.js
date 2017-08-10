@@ -6,8 +6,7 @@ class PokemonSpritesPageScraper {
 	}
 
 	scrape(url) {
-		const init = { header: { header: null } };
-		return fetch(`${url}`, init)
+		return fetch(`${url}`)
 			.then(response => response.text())
 			.then(text => parser.parseFromString(text, 'text/html'))
 			.then(dom => this.createDataObject(dom));

@@ -6,8 +6,7 @@ class BrainyQuotesPageScraper {
 	}
 
 	scrape(url) {
-		const init = { header: null, mode: 'no-cors' };
-		return fetch(`${url}`, init)
+		return fetch(`${url}`)
 			.then(response => response.text())
 			.then(text => parser.parseFromString(text, 'text/html'))
 			.then(dom => this.createDataObject(dom));
