@@ -11,6 +11,22 @@ function main() {
 	const $root = document.querySelector('#root');
 	$root.appendChild(mainContainer());
 
+	// NOTE:revisit later
+	// let display = document.getElementById('display');
+	//
+	// display.addEventListener('click', event => {
+	// 	if (event.target) {
+	// 		const lidOpen = document.getElementById('lidOpen');
+	// 		const lidClosed = document.getElementById('lidClosed');
+	// 		const trapezoidBorder = document.getElementById('trapezoidLidBorder');
+	// 		const trapezoidLid = document.getElementById('trapezoidLid');
+	// 		trapezoidBorder.setAttribute('style', 'visibility: hidden');
+	// 		trapezoidLid.setAttribute('style', 'visibility:hidden');
+	// 		lidClosed.setAttribute('style', 'visibility: hidden');
+	// 		lidOpen.setAttribute('style', 'visibility:visible');
+	// 	}
+	// });
+
 	document.getElementsByTagName('form')[0].addEventListener('submit', event => {
 		event.preventDefault();
 		const inputQuote = document.getElementById('quote');
@@ -29,19 +45,5 @@ function main() {
 				});
 			});
 		}
-	});
-
-	//pokedex event listener
-
-	const lidClosed = document.getElementById('lidClosed');
-	const lidOpen = document.getElementById('lidOpen');
-	const trapezoidBorder = document.getElementById('trapezoidLidBorder');
-	const trapezoidLid = document.getElementById('trapezoidLid');
-
-	document.addEventListener('transitionend', () => {
-		trapezoidBorder.setAttribute('style', 'visibility: hidden');
-		trapezoidLid.setAttribute('style', 'visibility:hidden');
-		lidClosed.setAttribute('style', 'visibility: hidden');
-		lidOpen.setAttribute('style', 'visibility:visible');
 	});
 }

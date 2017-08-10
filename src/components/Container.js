@@ -43,6 +43,5 @@ module.exports = function Container() {
 		),
 		div({ id: 'display', class: 'row' })
 	);
-
 	return container;
 };

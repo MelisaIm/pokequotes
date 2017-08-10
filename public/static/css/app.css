@@ -15,13 +15,14 @@ span {
 	display: block;
 }
 
-@@font-face {
-	font-family: "nintendo";
+@font-face {
+	font-family: nintendo;
 	src: url('../fonts/early-gameBoy.ttf');
 }
 
 p {
 	font-family: nintendo, Verdana, Arial;
+	font-size: 10px;
 }
 
 #absContainer {
@@ -63,6 +64,7 @@ p {
 
 #pokedex {
 	position: absolute;
+	left: 50px;
 	top: 10px;
 	background-color: red;
 	height: 350px;
@@ -251,10 +253,9 @@ p {
 	width: 251px;
 	border: black solid 1px;
 	border-radius: 10px 0 10px 10px;
-	transition-duration: 1s;
 }
 
-#lidClosed:hover #yellowTriangle {
+/*#lidClosed:hover #yellowTriangle {
 	visibility: hidden;
 }
 
@@ -263,9 +264,8 @@ p {
 }
 
 #lidClosed:hover {
-	/*     left: 255px; */
 	transform: rotateY(180deg) translateX(-252px);
-}
+}*/
 
 #trapezoidLidBorder {
 	position: absolute;
@@ -329,9 +329,9 @@ p {
 	box-sizing: border-box;
 	position: absolute;
 	background-color: red;
-	top: 61px;
+	top: 59px;
 	/*   left: 8px; */
-	left: 250px;
+	left: 248px;
 	height: 290px;
 	width: 254px;
 	border: black solid 1px;
@@ -342,26 +342,26 @@ p {
 #trapezoidOpenBorder {
 	transform: rotateY(180deg);
 	position: absolute;
-	top: -30px;
+	top: -29px;
 	left: 0px;
-	border-bottom: 30px solid black;
-	border-left: 53px solid transparent;
+	border-bottom: 29px solid black;
+	border-left: 51px solid transparent;
 	border-right: 0px solid transparent;
 	height: 0;
-	width: 94px;
+	width: 92px;
 }
 
 #trapezoidOpenLid {
 	z-index: 1;
 	transform: rotateY(180deg);
 	position: absolute;
-	top: -29px;
+	top: -28px;
 	left: 0px;
 	border-bottom: 35px solid red;
 	border-left: 60px solid transparent;
 	border-right: 0 solid transparent;
 	height: 0;
-	width: 100px;
+	width: 101px;
 }
 
 #quoteScreen {
@@ -374,8 +374,8 @@ p {
 	background-color: black;
 	overflow: scroll;
 	color: white;
-	padding: 0 5px;
-	/*set font to gameboy font */
+	padding: 5px 3px;
+	padding-left: 2px;
 }
 
 #blueButtons {
@@ -490,4 +490,12 @@ p {
 	bottom: 56px;
 	right: 40px;
 	box-shadow: inset 1px 1px 5px 1px gray;
+}
+
+#lidOpen {
+	visibility: visible;
+}
+
+#lidClosed {
+	visibility: hidden;
 }

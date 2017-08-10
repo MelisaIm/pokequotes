@@ -9,7 +9,8 @@ module.exports = function Widget(data) {
 	return column;
 };
 
-//
 // `${data.text}
 // ${data.author}`
 // img({ src: `${data.image}`
+
+//add pokedex event listener to each widget
