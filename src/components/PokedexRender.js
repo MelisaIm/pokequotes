@@ -1,4 +1,5 @@
 const { div, img, p } = require('elementx');
+const NameUpdater = require('./NameUpdater');
 
 module.exports = function PokedexGen1(data) {
 	const PokedexGen1 = div(
@@ -30,7 +31,7 @@ module.exports = function PokedexGen1(data) {
 			{ id: 'lidOpen' },
 			div({ id: 'trapezoidOpenBorder' }),
 			div({ id: 'trapezoidOpenLid' }),
-			div({ id: 'quoteScreen' }, p(`${data.text}`), p()),
+			div({ id: 'quoteScreen' }, p(`${data.text}`), p(`${NameUpdater(data.name, data.author)}`)),
 			div(
 				{ id: 'blueButtons' },
 				div({ class: 'hline' }),
