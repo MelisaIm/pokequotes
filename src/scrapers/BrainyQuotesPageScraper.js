@@ -6,7 +6,8 @@ class BrainyQuotesPageScraper {
 	}
 
 	scrape(url) {
-		return fetch(`${url}`)
+		const config = { headers: { origin: null } };
+		return fetch(`http://cors-bypass-proxy.axiomlogic.com/${url}`, config)
 			.then(response => response.text())
 			.then(text => parser.parseFromString(text, 'text/html'))
 			.then(dom => this.createDataObject(dom));
