@@ -6,7 +6,7 @@ module.exports = function Container() {
 		form(
 			{ class: 'row' },
 			div(
-				{ class: 'col offset-s2 s12 l10' },
+				{ class: 'col s12 l10' },
 				div(
 					{ class: 'input-field' },
 					input({
@@ -18,7 +18,7 @@ module.exports = function Container() {
 				)
 			),
 			div(
-				{ class: 'col offset-s2 s12 l10' },
+				{ class: 'col s12 l10' },
 				div(
 					{ class: 'input-field' },
 					input({

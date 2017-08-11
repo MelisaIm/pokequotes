@@ -15,17 +15,34 @@ function main() {
 	let display = document.getElementById('display');
 
 	display.addEventListener('click', event => {
-		if (event.target.classList.contains('lidClosed')) {
-			event.target.style.transform = 'rotateY(180deg) translateX(-249px)';
-			setTimeout(function() {
-				event.target.nextElementSibling.style.visibility = 'visible';
+		const mq = window.matchMedia('(max-width: 400px)');
+
+		if (mq.matches) {
+			if (event.target.classList.contains('lidClosed')) {
+				event.target.style.transform = 'rotateY(180deg) translateY(249px)';
+				setTimeout(function() {
+					event.target.nextElementSibling.style.visibility = 'visible';
+					event.target.style.visibility = 'hidden';
+				}, 1000);
+			}
+			if (event.target.classList.contains('lidOpen')) {
 				event.target.style.visibility = 'hidden';
-			}, 1000);
-		}
-		if (event.target.classList.contains('lidOpen')) {
-			event.target.style.visibility = 'hidden';
-			event.target.previousElementSibling.style.visibility = 'visible';
-			event.target.previousElementSibling.style.transform = 'rotateY(0deg) translateX(0px)';
+				event.target.previousElementSibling.style.visibility = 'visible';
+				event.target.previousElementSibling.style.transform = 'rotateY(0deg) translateX(0px)';
+			}
+		} else {
+			if (event.target.classList.contains('lidClosed')) {
+				event.target.style.transform = 'rotateY(180deg) translateX(-249px)';
+				setTimeout(function() {
+					event.target.nextElementSibling.style.visibility = 'visible';
+					event.target.style.visibility = 'hidden';
+				}, 1000);
+			}
+			if (event.target.classList.contains('lidOpen')) {
+				event.target.style.visibility = 'hidden';
+				event.target.previousElementSibling.style.visibility = 'visible';
+				event.target.previousElementSibling.style.transform = 'rotateY(0deg) translateX(0px)';
+			}
 		}
 	});
 
