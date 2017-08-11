@@ -509,3 +509,8 @@ p {
     left:0;
 		top: 350px;
   }
+
+	.pokemonWidget {
+		height: 400px;
+		margin-bottom: 370px;
+	}
