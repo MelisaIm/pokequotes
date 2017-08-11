@@ -458,7 +458,6 @@ p {
 	height: 35px;
 	width: 90px;
 	padding-left: 10px;
-	padding-right: 10px;
 	background-color: black;
 	border-radius: 5px;
 	box-sizing: border-box;
@@ -468,6 +467,7 @@ p {
 	position: absolute;
 	left: 135px;
 	bottom: 10px;
+	padding-right: 10px;
 }
 
 .two {
