@@ -25,7 +25,7 @@ module.exports = function Container() {
 						id: 'poke',
 						type: 'text',
 						name: 'search',
-						placeholder: 'Enter a Pokemon name'
+						placeholder: 'Enter a Pokemon sprite page from Pokemondb'
 					})
 				)
 			),
