@@ -1,6 +1,6 @@
 README
 
-INSERT GIF HERE
+![pokedex gif](pokedex.gif)
 
 Welcome to PokeQuotes:
 
@@ -15,4 +15,4 @@ Future Enhancements:
 - Drop-down for Pokemon selection
 - Export of widgets
 - Data caching
-- Create more interesting data outputs 
+- Create more interesting data outputs
