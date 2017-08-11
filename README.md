@@ -1,4 +1,4 @@
-README
+PokeQuotes README
 
 ![pokedex gif](pokedex.gif)
 
