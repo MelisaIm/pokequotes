@@ -33,11 +33,11 @@ module.exports = function Container() {
 				{ class: 'col s12 l2' },
 				button(
 					{
-						class: 'btn-large waves-effect waves-light col s12 m12 l8 center',
+						class: 'btn-large waves-effect waves-light col s12 m12 l8 center white',
 						type: 'submit',
 						name: 'action'
 					},
-					img({ src: 'pokeball.png', alt: 'pokeball' })
+					img({ src: 'pokeball.png', alt: 'pokeball', align: 'center' })
 				)
 			)
 		),

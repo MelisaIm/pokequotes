@@ -16,6 +16,11 @@ span {
 	display: block;
 }
 
+form {
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+}
+
 @font-face {
 	font-family: nintendo;
 	src: url('../fonts/early-gameBoy.ttf');
