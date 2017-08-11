@@ -1,6 +1,6 @@
 body {
-	background-image: url('../../grass.jpg');
-	background-repeat: repeat-y;
+	background-image: url('../../grass1.png');
+	background-repeat: repeat;
 	min-height: 100vh;
 }
 
@@ -19,6 +19,8 @@ span {
 form {
 	background-color: rgba(0, 0, 0, 0.5);
 	color: white;
+	border-radius: 30px;
+	padding-left: 25px;
 }
 
 @font-face {
@@ -37,8 +39,8 @@ p {
 }
 
 .card.hoverable {
-	height: 400px;
-	width: 350px;
+	height: 300px;
+	width: 200px;
 	margin: 0 85% 0 15%;
 	background-color: transparent;
 }
@@ -66,8 +68,8 @@ p {
 
 .pokedex {
 	position: absolute;
-	left: 50px;
-	top: 10px;
+	/*left: 50px;*/
+	/*top: 10px;*/
 	background-color: red;
 	height: 350px;
 	width: 250px;
@@ -375,7 +377,6 @@ p {
 	overflow: scroll;
 	color: white;
 	padding: 5px 3px;
-	padding-left: 2px;
 }
 
 .blueButtons {
@@ -461,14 +462,14 @@ p {
 
 .one {
 	position: absolute;
-	left: 25px;
+	left: 135px;
 	bottom: 10px;
 	font-size: 8px;
 }
 
 .two {
 	position: absolute;
-	left: 135px;
+	left: 25px;
 	bottom: 10px;
 }
 
