@@ -451,21 +451,23 @@ p {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size: 10px;
+	font-size: 8px;
 	overflow-x: scroll;
 	white-space: nowrap;
 	color: white;
 	height: 35px;
 	width: 90px;
+	padding-left: 10px;
+	padding-right: 10px
 	background-color: black;
 	border-radius: 5px;
+	box-sizing: border-box;
 }
 
 .one {
 	position: absolute;
 	left: 135px;
 	bottom: 10px;
-	font-size: 8px;
 }
 
 .two {
