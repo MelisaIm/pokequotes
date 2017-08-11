@@ -3,49 +3,49 @@ const NameUpdater = require('./NameUpdater');
 
 module.exports = function PokedexGen1(data) {
 	const PokedexGen1 = div(
-		{ id: 'pokedex' },
-		div({ id: 'bigCircle' }, div({ id: 'blueCircle' })),
-		div({ id: 'redDot' }),
-		div({ id: 'yellowDot' }),
-		div({ id: 'greenDot' }),
+		{ class: 'pokedex' },
+		div({ class: 'bigCircle' }, div({ class: 'blueCircle' })),
+		div({ class: 'redDot' }),
+		div({ class: 'yellowDot' }),
+		div({ class: 'greenDot' }),
 		div(
-			{ id: 'screen' },
-			div({ id: 'redButton1', class: 'redButton' }),
-			div({ id: 'redButton2', class: 'redButton' }),
-			div({ id: 'displayPokedex' }, img({ src: `${data.image}`, alt: `${data.name}` })),
-			div({ id: 'redCircle', class: 'redButton' })
+			{ class: 'screen' },
+			div({ class: 'redButton1 redButton' }),
+			div({ class: 'redButton2 redButton' }),
+			div({ class: 'displayPokedex' }, img({ src: `${data.image}`, alt: `${data.name}` })),
+			div({ class: 'redCircle redButton' })
 		),
-		div({ id: 'blackCircle', class: 'redButton' }),
-		div({ id: 'screenRed', class: 'thinButton' }),
-		div({ id: 'screenBlue', class: 'thinButton' }),
-		div({ id: 'greenRectangle' }),
-		div({ id: 'dPad' }, div({ class: 'rectangle' }), div({ id: 'verticalR', class: 'rectangle' })),
+		div({ class: 'blackCircle redButton' }),
+		div({ class: 'screenRed thinButton' }),
+		div({ class: 'screenBlue thinButton' }),
+		div({ class: 'greenRectangle' }),
+		div({ class: 'dPad' }, div({ class: 'rectangle' }), div({ class: 'verticalR rectangle' })),
 		div(
-			{ id: 'lidClosed' },
-			div({ id: 'trapezoidLidBorder' }),
-			div({ id: 'trapezoidLid' }),
-			div({ id: 'yellowTriangle' }, div({ id: 'innerTriangle' })),
-			div({ id: 'groove' })
+			{ class: 'lidClosed' },
+			div({ class: 'trapezoidLidBorder' }),
+			div({ class: 'trapezoidLid' }),
+			div({ class: 'yellowTriangle' }, div({ class: 'innerTriangle' })),
+			div({ class: 'groove' })
 		),
 		div(
-			{ id: 'lidOpen' },
-			div({ id: 'trapezoidOpenBorder' }),
-			div({ id: 'trapezoidOpenLid' }),
-			div({ id: 'quoteScreen' }, p(`${data.text}`), p(`${NameUpdater(data.name, data.author)}`)),
+			{ class: 'lidOpen' },
+			div({ class: 'trapezoidOpenBorder' }),
+			div({ class: 'trapezoidOpenLid' }),
+			div({ class: 'quoteScreen' }, p(`${data.text}`), p(`${NameUpdater(data.name, data.author)}`)),
 			div(
-				{ id: 'blueButtons' },
+				{ class: 'blueButtons' },
 				div({ class: 'hline' }),
 				div({ class: 'vline a' }),
 				div({ class: 'vline b' }),
 				div({ class: 'vline c' }),
 				div({ class: 'vline d' })
 			),
-			div({ id: 'grayButtons' }, div({ class: 'grayDiv' })),
-			div({ id: 'one', class: 'blackButton' }),
-			div({ id: 'two', class: 'blackButton' }),
-			div({ id: 'firstButton', class: 'thinButton' }),
-			div({ id: 'secondButton', class: 'thinButton' }),
-			div({ id: 'goldButton' })
+			div({ class: 'grayButtons' }, div({ class: 'grayDiv' })),
+			div({ class: 'one blackButton' }),
+			div({ class: 'two blackButton' }),
+			div({ class: 'firstButton thinButton' }),
+			div({ class: 'secondButton thinButton' }),
+			div({ class: 'goldButton' })
 		)
 	);
 	return PokedexGen1;

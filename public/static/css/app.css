@@ -1,5 +1,6 @@
 body {
-	background: #f5f5f5;
+	background-image: url('../../grass.jpg');
+	background-repeat: repeat-y;
 	min-height: 100vh;
 }
 
@@ -25,20 +26,16 @@ p {
 	font-size: 10px;
 }
 
-#absContainer {
-	position: absolute;
-	height: 400px;
-	width: 550px;
-	left: 100px;
-}
-
-#pokemonWidget {
+.pokemonWidget {
 	height: 400px;
 	margin-bottom: 40px;
 }
 
 .card.hoverable {
 	height: 400px;
+	width: 350px;
+	margin: 0 85% 0 15%;
+	background-color: transparent;
 }
 
 .card-content {
@@ -62,7 +59,7 @@ p {
 
 /*Pokedex CSS*/
 
-#pokedex {
+.pokedex {
 	position: absolute;
 	left: 50px;
 	top: 10px;
@@ -72,12 +69,12 @@ p {
 	border-radius: 10px;
 	border: black solid 1px;
 	box-shadow: inset 1px 1px 7px 4px #b80000;
-	box-shadow: 12px 8px 5px 1px gray;
+	/*box-shadow: 12px 8px 5px 1px gray;*/
 }
 
-#bigCircle {
+.bigCircle {
 	position: absolute;
-	top: 20px;
+	top: 15px;
 	left: 20px;
 	height: 40px;
 	width: 40px;
@@ -87,7 +84,7 @@ p {
 	box-shadow: inset 2px 2px 3px 3px gray;
 }
 
-#blueCircle {
+.blueCircle {
 	position: absolute;
 	left: 1.5px;
 	top: 1.5px;
@@ -97,7 +94,7 @@ p {
 	background-color: blue;
 }
 
-#redDot {
+.redDot {
 	position: absolute;
 	left: 70px;
 	top: 20px;
@@ -108,7 +105,7 @@ p {
 	background-color: red;
 }
 
-#yellowDot {
+.yellowDot {
 	position: absolute;
 	left: 90px;
 	top: 20px;
@@ -119,7 +116,7 @@ p {
 	background-color: yellow;
 }
 
-#greenDot {
+.greenDot {
 	position: absolute;
 	left: 110px;
 	top: 20px;
@@ -130,7 +127,7 @@ p {
 	background-color: lightgreen;
 }
 
-#screen {
+.screen {
 	position: absolute;
 	top: 80px;
 	left: 25px;
@@ -142,17 +139,17 @@ p {
 	box-shadow: inset 2px 1px 2px 2px gray;
 }
 
-#redButton1 {
+.redButton1 {
 	left: 80px;
 	top: 7px;
 }
 
-#redButton2 {
+.redButton2 {
 	left: 110px;
 	top: 7px;
 }
 
-#displayPokedex {
+.displayPokedex {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -175,14 +172,14 @@ p {
 	position: absolute;
 }
 
-#redCircle {
+.redCircle {
 	height: 10px;
 	width: 10px;
 	bottom: 13px;
 	left: 13px;
 }
 
-#blackCircle {
+.blackCircle {
 	width: 30px;
 	height: 30px;
 	bottom: 70px;
@@ -191,7 +188,7 @@ p {
 	background-color: black;
 }
 
-#greenRectangle {
+.greenRectangle {
 	width: 80px;
 	height: 50px;
 	background-color: green;
@@ -202,7 +199,7 @@ p {
 	border: black solid 1px;
 }
 
-#screenRed {
+.screenRed {
 	position: absolute;
 	bottom: 85px;
 	left: 60px;
@@ -210,7 +207,7 @@ p {
 	border: black solid 1px;
 }
 
-#screenBlue {
+.screenBlue {
 	position: absolute;
 	bottom: 85px;
 	left: 105px;
@@ -218,7 +215,7 @@ p {
 	border: black solid 1px;
 }
 
-#dPad {
+.dPad {
 	width: 80px;
 	height: 80px;
 	background-color: transparent;
@@ -236,23 +233,24 @@ p {
 	border-radius: 10px;
 }
 
-#verticalR {
+.verticalR {
 	transform: rotate(90deg);
 }
 
 /* LID CLOSED */
 
-#lidClosed {
+.lidClosed {
 	z-index: 1;
 	box-sizing: border-box;
 	position: absolute;
 	background-color: red;
-	top: 70px;
+	top: 59px;
 	left: -1px;
-	height: 281px;
+	height: 290px;
 	width: 251px;
 	border: black solid 1px;
 	border-radius: 10px 0 10px 10px;
+	transition: transform 1s;
 }
 
 /*#lidClosed:hover #yellowTriangle {
@@ -261,13 +259,9 @@ p {
 
 #lidClosed:hover #innerTriangle {
 	visibility: hidden;
-}
-
-#lidClosed:hover {
-	transform: rotateY(180deg) translateX(-252px);
 }*/
 
-#trapezoidLidBorder {
+.trapezoidLidBorder {
 	position: absolute;
 	top: -30px;
 	right: -1px;
@@ -278,7 +272,7 @@ p {
 	width: 94px;
 }
 
-#trapezoidLid {
+.trapezoidLid {
 	position: absolute;
 	top: -29px;
 	right: 0px;
@@ -289,7 +283,7 @@ p {
 	width: 100px;
 }
 
-#yellowTriangle {
+.yellowTriangle {
 	position: absolute;
 	margin: 50% 4px;
 	width: 0;
@@ -299,7 +293,7 @@ p {
 	border-left: 22px solid black;
 }
 
-#innerTriangle {
+.innerTriangle {
 	position: relative;
 	top: -20px;
 	right: 21px;
@@ -310,7 +304,7 @@ p {
 	border-left: 20px solid yellow;
 }
 
-#groove {
+.groove {
 	position: absolute;
 	border: black solid 1px;
 	border-radius: 20px;
@@ -323,7 +317,7 @@ p {
 
 /*Lid Open*/
 
-#lidOpen {
+.lidOpen {
 	visibility: hidden;
 	z-index: 2;
 	box-sizing: border-box;
@@ -336,10 +330,11 @@ p {
 	width: 254px;
 	border: black solid 1px;
 	border-radius: 10px 0 10px 10px;
-	box-shadow: 12px 8px 5px 1px gray;
+	/*box-shadow: 12px 8px 5px 1px gray;*/
+	transition-delay: visibility 2s;
 }
 
-#trapezoidOpenBorder {
+.trapezoidOpenBorder {
 	transform: rotateY(180deg);
 	position: absolute;
 	top: -29px;
@@ -351,7 +346,7 @@ p {
 	width: 92px;
 }
 
-#trapezoidOpenLid {
+.trapezoidOpenLid {
 	z-index: 1;
 	transform: rotateY(180deg);
 	position: absolute;
@@ -364,7 +359,7 @@ p {
 	width: 101px;
 }
 
-#quoteScreen {
+.quoteScreen {
 	box-sizing: border-box;
 	width: 200px;
 	height: 85px;
@@ -378,7 +373,7 @@ p {
 	padding-left: 2px;
 }
 
-#blueButtons {
+.blueButtons {
 	background-color: DeepSkyBlue;
 	position: absolute;
 	height: 70px;
@@ -424,7 +419,7 @@ p {
 	left: 160px;
 }
 
-#grayButtons {
+.grayButtons {
 	position: absolute;
 	height: 35px;
 	width: 87px;
@@ -450,13 +445,13 @@ p {
 	border-radius: 5px;
 }
 
-#one {
+.one {
 	position: absolute;
 	left: 25px;
 	bottom: 10px;
 }
 
-#two {
+.two {
 	position: absolute;
 	left: 135px;
 	bottom: 10px;
@@ -469,19 +464,19 @@ p {
 	background-color: black;
 }
 
-#firstButton {
+.firstButton {
 	position: absolute;
 	bottom: 90px;
 	right: 60px;
 }
 
-#secondButton {
+.secondButton {
 	position: absolute;
 	bottom: 90px;
 	right: 26px;
 }
 
-#goldButton {
+.goldButton {
 	width: 25px;
 	height: 25px;
 	border-radius: 15px;
@@ -490,12 +485,4 @@ p {
 	bottom: 56px;
 	right: 40px;
 	box-shadow: inset 1px 1px 5px 1px gray;
-}
-
-#lidOpen {
-	visibility: visible;
-}
-
-#lidClosed {
-	visibility: hidden;
 }

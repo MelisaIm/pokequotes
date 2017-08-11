@@ -12,20 +12,22 @@ function main() {
 	$root.appendChild(mainContainer());
 
 	// NOTE:revisit later
-	// let display = document.getElementById('display');
-	//
-	// display.addEventListener('click', event => {
-	// 	if (event.target) {
-	// 		const lidOpen = document.getElementById('lidOpen');
-	// 		const lidClosed = document.getElementById('lidClosed');
-	// 		const trapezoidBorder = document.getElementById('trapezoidLidBorder');
-	// 		const trapezoidLid = document.getElementById('trapezoidLid');
-	// 		trapezoidBorder.setAttribute('style', 'visibility: hidden');
-	// 		trapezoidLid.setAttribute('style', 'visibility:hidden');
-	// 		lidClosed.setAttribute('style', 'visibility: hidden');
-	// 		lidOpen.setAttribute('style', 'visibility:visible');
-	// 	}
-	// });
+	let display = document.getElementById('display');
+
+	display.addEventListener('click', event => {
+		if (event.target.classList.contains('lidClosed')) {
+			event.target.style.transform = 'rotateY(180deg) translateX(-249px)';
+			setTimeout(function() {
+				event.target.nextElementSibling.style.visibility = 'visible';
+				event.target.style.visibility = 'hidden';
+			}, 1000);
+		}
+		if (event.target.classList.contains('lidOpen')) {
+			event.target.style.visibility = 'hidden';
+			event.target.previousElementSibling.style.visibility = 'visible';
+			event.target.previousElementSibling.style.transform = 'rotateY(0deg) translateX(0px)';
+		}
+	});
 
 	document.getElementsByTagName('form')[0].addEventListener('submit', event => {
 		event.preventDefault();

@@ -3,8 +3,8 @@ const pokedex = require('./PokedexRender.js');
 
 module.exports = function Widget(data) {
 	const column = div(
-		{ id: 'pokemonWidget', class: 'col s12' },
-		div({ class: 'card hoverable center-align' }, pokedex(data))
+		{ class: 'col s12 pokemonWidget center-align' },
+		div({ class: 'card hoverable' }, pokedex(data))
 	);
 	return column;
 };
