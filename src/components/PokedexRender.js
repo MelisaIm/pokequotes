@@ -41,8 +41,8 @@ module.exports = function PokedexGen1(data) {
 				div({ class: 'vline d' })
 			),
 			div({ class: 'grayButtons' }, div({ class: 'grayDiv' })),
-			div({ class: 'one blackButton' }),
-			div({ class: 'two blackButton' }),
+			div({ class: 'one blackButton' }, `${data.profession}`),
+			div({ class: 'two blackButton' }, `${data.nationality}`),
 			div({ class: 'firstButton thinButton' }),
 			div({ class: 'secondButton thinButton' }),
 			div({ class: 'goldButton' })

@@ -439,6 +439,15 @@ p {
 }
 
 .blackButton {
+	font-family: nintendo, Arial;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 10px;
+	overflow-x: scroll;
+	white-space: nowrap;
+	color: white;
 	height: 35px;
 	width: 90px;
 	background-color: black;
@@ -449,6 +458,7 @@ p {
 	position: absolute;
 	left: 25px;
 	bottom: 10px;
+	font-size: 8px;
 }
 
 .two {
