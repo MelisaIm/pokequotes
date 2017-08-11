@@ -14,10 +14,14 @@ class PokemonSpritesPageScraper {
 
 	createDataObject(dom) {
 		const widgetObj = {};
-		const pokeGIF = dom.querySelectorAll("a[href$='.gif")[0].href;
+		const pokeGIF = dom.querySelectorAll("a[href$='.gif")[0]
+			? dom.querySelectorAll("a[href$='.gif")[0].href
+			: 'N/A';
 		widgetObj.image = pokeGIF;
 		const pageTitle = dom.getElementsByTagName('title')[0];
-		widgetObj.name = pageTitle.innerText.slice(0, pageTitle.innerText.indexOf(' '));
+		widgetObj.name = pageTitle
+			? pageTitle.innerText.slice(0, pageTitle.innerText.indexOf(' '))
+			: 'N/A';
 		return widgetObj;
 	}
 }
