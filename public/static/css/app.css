@@ -20,7 +20,11 @@ form {
 	background-color: rgba(0, 0, 0, 0.5);
 	color: white;
 	border-radius: 30px;
-	padding-left: 25px;
+	padding: 25px;
+}
+
+.input-field {
+	width: 100%;
 }
 
 @font-face {
@@ -68,15 +72,12 @@ p {
 
 .pokedex {
 	position: absolute;
-	/*left: 50px;*/
-	/*top: 10px;*/
 	background-color: red;
 	height: 350px;
 	width: 250px;
 	border-radius: 10px;
 	border: black solid 1px;
 	box-shadow: inset 1px 1px 7px 4px #b80000;
-	/*box-shadow: 12px 8px 5px 1px gray;*/
 }
 
 .bigCircle {
@@ -502,3 +503,9 @@ p {
 	right: 40px;
 	box-shadow: inset 1px 1px 5px 1px gray;
 }
+
+@media (max-width: 400px) {
+  .lidOpen {
+    left:0;
+		top: 350px;
+  }
