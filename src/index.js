@@ -11,13 +11,12 @@ function main() {
 	const $root = document.querySelector('#root');
 	$root.appendChild(mainContainer());
 
-	// NOTE:revisit later
 	let display = document.getElementById('display');
 
 	display.addEventListener('click', event => {
-		const mq = window.matchMedia('(max-width: 400px)');
+		const screenSize = window.matchMedia('(max-width: 400px)');
 
-		if (mq.matches) {
+		if (screenSize.matches) {
 			if (event.target.classList.contains('lidClosed')) {
 				event.target.style.transform = 'rotateY(180deg) translateY(249px)';
 				setTimeout(function() {
@@ -51,7 +50,7 @@ function main() {
 		const inputQuote = document.getElementById('quote');
 		const inputPoke = document.getElementById('poke');
 		if (inputQuote.value === '' || inputPoke.value === '') {
-			Materialize.toast('Your input is blank!', 4000);
+			// Materialize.toast('Your input is blank!', 4000);
 		} else {
 			const Data = {};
 			BrainyScraper.scrape(inputQuote.value).then(BrainyData => {
