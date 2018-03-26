@@ -1,47 +1,36 @@
-const { div, form, input, button, img } = require('elementx');
+const { div, form, input, button, img } = require("elementx");
 
 module.exports = function Container() {
 	const container = div(
-		{ id: 'container', class: 'container col s12' },
+		{ id: "container", class: "container col s12" },
 		form(
-			{ class: 'row' },
+			{ class: "row" },
+			div({ class: "col s12 l10" }),
 			div(
-				{ class: 'col s12 l10' },
+				{ class: "col s12 l10" },
 				div(
-					{ class: 'input-field' },
+					{ class: "input-field" },
 					input({
-						id: 'quote',
-						type: 'text',
-						name: 'search',
-						placeholder: 'Enter a quote page from BrainyQuotes'
+						id: "poke",
+						type: "text",
+						name: "search",
+						placeholder: "Enter a Pokemon name"
 					})
 				)
 			),
 			div(
-				{ class: 'col s12 l10' },
-				div(
-					{ class: 'input-field' },
-					input({
-						id: 'poke',
-						type: 'text',
-						name: 'search',
-						placeholder: 'Enter a Pokemon sprite page from Pokemondb'
-					})
-				)
-			),
-			div(
-				{ class: 'col s12 l2' },
+				{ class: "col s12 l2" },
 				button(
 					{
-						class: 'btn-large waves-effect waves-light col s12 m12 l8 center white',
-						type: 'submit',
-						name: 'action'
+						class: "btn-large waves-effect waves-light col s12 m12 l8 center white",
+						type: "submit",
+						name: "action"
 					},
-					img({ src: 'pokeball.png', alt: 'pokeball', align: 'center' })
+					img({ src: "pokeball.png", alt: "pokeball", align: "center" })
 				)
 			)
 		),
-		div({ id: 'display', class: 'row' })
+		div({ id: "display", class: "row" })
 	);
 	return container;
 };
