@@ -6,10 +6,14 @@ class PokemonData {
 	}
 
 	scrape(inputName) {
-		return fetch(`${CONFIG.POKE_API}${inputName}/`)
+		return fetch(`${CONFIG.POKE_API}${inputName.toLowerCase()}/`)
 			.then(response => response.json())
 			.then(data => this.createDataObject(data))
-			.catch(window.alert("Pokemon not found (spelling matters)"));
+			.catch(error => {
+				if (error) {
+					window.alert("Pokemon not found (spelling matters)");
+				}
+			});
 	}
 
 	createDataObject(data) {
